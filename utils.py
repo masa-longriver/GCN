@@ -107,3 +107,8 @@ class Visualize():
             font_weight='bold'
         )
         axes[1].axis('off')
+
+        file_nm = os.path.join(self.parent_path, f"{self.now}_result.png")
+        plt.tight_layout()
+        plt.savefig(file_nm)
+        plt.close()
